@@ -1,0 +1,95 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.half-width {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.half-width img {
+  width: 100%;
+}
+
+.logo-part img {
+  margin-top: 0px;
+  margin-left: 50px;
+  padding: 0px;
+  height: 150px;
+  width: 150px;
+}
+
+.form {
+  margin: 5%;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftPanel {
+  background-color: #202020;
+  color: white;
+}
+
+.rightPanel {
+  background-color: darksalmon;
+}
+
+.btn {
+  align-items: center;
+  background-color: brown;
+  color: white;
+  font-weight: bold;
+}
+
+#login {
+  width: 70%;
+}
+
+.form-control {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.col {
+  align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .rightPanel img {
+    display: none;
+  }
+
+  .homepage {
+    flex-direction: column;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    background-color: #202020;
+  }
+}
