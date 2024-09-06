@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .half-width {
@@ -15,13 +19,15 @@ body {
 .half-width img {
   width: 100%;
 }
-
+.logo-part{
+  color: orangered;
+}
 .logo-part img {
   margin-top: 0px;
   margin-left: 50px;
   padding: 0px;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 
 .form {
@@ -31,7 +37,7 @@ body {
   flex-direction: column;
 }
 
-.homepage {
+#profile {
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -55,7 +61,7 @@ body {
 }
 
 .rightPanel {
-  background-color: darksalmon;
+  background-color: rgb(79, 5, 5);
 }
 
 .btn {
@@ -63,6 +69,7 @@ body {
   background-color: brown;
   color: white;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 #login {
@@ -72,12 +79,154 @@ body {
 .form-control {
   width: 70%;
   border-radius: 10px;
+  resize: none;
+}
+
+.form-control::-webkit-scrollbar{
+  display: none;
 }
 
 .col {
   align-content: center;
 }
 
+#task-body{
+  display: none;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #202020;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+header{
+  padding: 32px 16px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1{
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: orangered
+}
+
+#new-task-form{
+  display: flex;
+}
+
+input , button{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input{
+  flex: 1 1 0%;
+  background-color: rgb(53, 93, 93);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  color: cyan;
+  font-size: 1.25rem;
+  resize: none;
+  height: 70px;
+}
+#new-task-input::-webkit-scrollbar{
+  display: none;
+}
+
+
+#new-task-input::placeholder{
+  color: whitesmoke;
+}
+#submit{
+  cursor: pointer;
+  transition: 0.4s;
+}
+#submit:hover{
+    opacity: 0.7;
+    color: white;
+}
+
+#submit:active{
+    opacity:0.8;
+}
+main{
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list{
+  padding: 1rem;
+}
+
+.task-list h2{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(210, 223, 223);
+  padding: 1 rem;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.task .content .text{
+  color: rgb(211, 117, 3);
+  font-size: 20px;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+.task .content .text:not(:read-only){
+
+  color: pink;
+}
+
+.task .content .actions{
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .actions button{
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.task .actions button:hover{
+  opacity: 0.6;
+}
+
+.task .actions button:active{
+  opacity:0.8;
+}
+.task .actions .edit{
+  background-image: linear-gradient(130deg, rgb(15, 186, 228),rgb(54, 12, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.task .actions .delete{
+  color:crimson;
+  font-weight: 600;
+}
 @media screen and (max-width: 768px) {
   .rightPanel img {
     display: none;
