@@ -24,25 +24,25 @@
                 <div class="form">
                     <h2>Create Your Profile</h2>
                     <div class="mb-3 steps">
-                        <label for="exampleFormControlInput1" class="form-label" ><b>Email address</b></label>
+                        <label for="exampleFormControlInput1" class="form-label"><b>Email address</b></label>
                         <input type="email" class="form-control bg-dark text-light" id="exampleFormControlInput1"
-                            placeholder="name@example.com" required>
+                            placeholder="name@example.com">
                     </div>
                     <br>
                     <label><b>Your Name</b></label>
                     <div class="row">
                         <div class="col">
                             <input type="text" class="form-control bg-dark text-light" placeholder="First name"
-                                aria-label="First name" required>
+                                aria-label="First name">
                         </div>
                         <br>
                         <div class="col">
                             <input type="text" class="form-control bg-dark text-light" placeholder="Last name"
-                                aria-label="Last name" required>
+                                aria-label="Last name">
                         </div>
                         <br>
                         <div class="col">
-                            <button id="login" class="btn form-control" required>Continue</button>
+                            <button id="login" class="btn form-control">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             <img src="Media/54861b4d51699454df92b8c44c44d64f.png" alt="">
         </div>
     </div>
-    <div id="task-body">
+    <div id="task-body" style="display:none">
         <header>
             <h1 class="logo-part"><img src="Media/checking-list-svgrepo-com.svg" alt="">Task List</h1>
             <form id="new-task-form" onsubmit="event.preventDefault(); addTask();">
@@ -64,6 +64,7 @@
             <section class="task-list">
                 <h2>Things to do</h2>
                 <div id="tasks">
+                    <!-- task div creates here like this one: -->
                     <!-- <div class="task">
                         <div class="content">
                             <input type="text" class="text" value="My shiny task">
