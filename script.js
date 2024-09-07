@@ -67,12 +67,12 @@ function addTask() {
     editButton.classList.add('edit');
     editButton.innerText= 'Edit';
 
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete');
-    deleteButton.innerText= 'Delete';
+    const doneButton = document.createElement('button');
+    doneButton.classList.add('done');
+    doneButton.innerText= 'Done';
 
     actionsDiv.appendChild(editButton);
-    actionsDiv.appendChild(deleteButton);
+    actionsDiv.appendChild(doneButton);
 
     taskDiv.appendChild(contentDiv);
     taskDiv.appendChild(actionsDiv);
@@ -95,7 +95,7 @@ function addTask() {
         }
     });
 
-    deleteButton.addEventListener('click',()=>{
+    doneButton.addEventListener('click',()=>{
         tasksContainer.removeChild(taskDiv);
     });
 }

@@ -224,7 +224,7 @@ main{
   font-weight: 600;
 }
 
-.task .actions .delete{
+.task .actions .done{
   color:crimson;
   font-weight: 600;
 }
